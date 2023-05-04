@@ -1,5 +1,5 @@
 
-rootProject.name = "Person"
+rootProject.name = "person"
 
 sourceControl {
     val url = "https://github.com/adielDev/Person.git"
