@@ -8,20 +8,6 @@ group = "com.andriel"
 version = "1"
 
 
-
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "com.andriel"
-            artifactId = "person"
-            version = "1"
-
-            from(components["java"])
-        }
-    }
-}
-
-
 repositories {
     mavenCentral()
     mavenLocal()
