@@ -7,6 +7,7 @@ plugins {
 group = "com.andriel"
 version = "1"
 
+
 publishing {
     publications {
         create<MavenPublication>("maven") {
