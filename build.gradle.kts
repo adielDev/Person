@@ -1,13 +1,28 @@
 plugins {
     kotlin("jvm") version "1.8.0"
-    application
+    `java-library`
+    `maven-publish`
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+group = "com.andriel"
+version = "1"
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.andriel"
+            artifactId = "person"
+            version = "1"
+
+            from(components["java"])
+        }
+    }
+}
+
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -20,8 +35,4 @@ tasks.test {
 
 kotlin {
     jvmToolchain(8)
-}
-
-application {
-    mainClass.set("MainKt")
 }

@@ -1,4 +1,3 @@
 package andriel.person
 
-class Person {
-}
+class Person (val name:String)
